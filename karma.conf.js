@@ -5,14 +5,14 @@ module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
-    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessCI'],
+    browsers: ['ChromeHeadlessCI'],
     customLaunchers: {
       ChromeHeadlessCI: {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
     },
-    files: ['test/**/*.js'],
+    files: ['test/*.js'],
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
